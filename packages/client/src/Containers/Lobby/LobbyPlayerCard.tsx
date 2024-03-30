@@ -61,8 +61,8 @@ const LobbyPlayerCard: React.FC<propTypes> = ({ player, thisPlayer }) => {
 				<div className={styles.playerDetails}>
 					<p className={styles.playerName}>{player.isHost && <span className={styles.hostIcon}>&#9812;</span>}{player.name}</p>
 					{player.isReady && <p className={styles.readyPlayerText}>Player is Ready</p>}
-					<img src={aiChip} alt="" />
-					{player.isAgent && <img src={aiChip} alt="ai player" />}
+					<img src={aiChip} alt="" width={36} height={53}/>
+					{player.isAgent && <img src={aiChip} className={styles.aiChip}  alt="ai player" />}
 					{hoverKick && <p className={styles.kickPlayerText}>Kick player</p>}
 					<p className={styles.playerTraits}>{formatter.format(player.traits)}</p>
 				</div>
