@@ -1,10 +1,12 @@
 procs:
+
   contracts:
     cwd: packages/contracts
     shell: pnpm run dev
   client:
     cwd: packages/client
     shell: pnpm run dev
-  backend:
-    cwd: pacakges/api
+  server:
+    cwd: packages/api
     shell: pnpm run dev
+
