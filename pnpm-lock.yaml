@@ -244,6 +244,9 @@ importers:
       '@latticexyz/world':
         specifier: 2.0.1
         version: 2.0.1(typescript@5.4.2)
+      '@latticexyz/world-modules':
+        specifier: 2.0.1
+        version: 2.0.1(typescript@5.4.2)
     devDependencies:
       '@types/node':
         specifier: ^18.15.11

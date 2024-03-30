@@ -11,11 +11,11 @@ pragma solidity >=0.8.24;
 interface IInstrumentSystem {
   error OUT_OF_BOUNDS(int32 distance);
 
-  function add(string memory name, bytes3 color, int32 x, int32 y, int32 z) external;
+  function games__add(string memory name, bytes3 color, int32 x, int32 y, int32 z) external;
 
-  function move(uint32 index, int32 x, int32 y, int32 z) external;
+  function games__move(uint32 index, int32 x, int32 y, int32 z) external;
 
-  function hide(uint32 index) external;
+  function games__hide(uint32 index) external;
 
-  function show(uint32 index) external;
+  function games__show(uint32 index) external;
 }

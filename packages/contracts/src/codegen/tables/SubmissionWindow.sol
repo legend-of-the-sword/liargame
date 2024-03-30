@@ -16,15 +16,15 @@ import { Schema } from "@latticexyz/store/src/Schema.sol";
 import { EncodedLengths, EncodedLengthsLib } from "@latticexyz/store/src/EncodedLengths.sol";
 import { ResourceId } from "@latticexyz/store/src/ResourceId.sol";
 
-library Count {
-  // Hex below is the result of `WorldResourceIdLib.encode({ namespace: "games", name: "Count", typeId: RESOURCE_TABLE });`
-  ResourceId constant _tableId = ResourceId.wrap(0x746267616d6573000000000000000000436f756e740000000000000000000000);
+library SubmissionWindow {
+  // Hex below is the result of `WorldResourceIdLib.encode({ namespace: "games", name: "SubmissionWindow", typeId: RESOURCE_TABLE });`
+  ResourceId constant _tableId = ResourceId.wrap(0x746267616d65730000000000000000005375626d697373696f6e57696e646f77);
 
   FieldLayout constant _fieldLayout =
     FieldLayout.wrap(0x0004010004000000000000000000000000000000000000000000000000000000);
 
-  // Hex-encoded key schema of ()
-  Schema constant _keySchema = Schema.wrap(0x0000000000000000000000000000000000000000000000000000000000000000);
+  // Hex-encoded key schema of (bytes32)
+  Schema constant _keySchema = Schema.wrap(0x002001005f000000000000000000000000000000000000000000000000000000);
   // Hex-encoded value schema of (uint32)
   Schema constant _valueSchema = Schema.wrap(0x0004010003000000000000000000000000000000000000000000000000000000);
 
@@ -33,7 +33,8 @@ library Count {
    * @return keyNames An array of strings with the names of key fields.
    */
   function getKeyNames() internal pure returns (string[] memory keyNames) {
-    keyNames = new string[](0);
+    keyNames = new string[](1);
+    keyNames[0] = "id";
   }
 
   /**
@@ -62,8 +63,9 @@ library Count {
   /**
    * @notice Get value.
    */
-  function getValue() internal view returns (uint32 value) {
-    bytes32[] memory _keyTuple = new bytes32[](0);
+  function getValue(bytes32 id) internal view returns (uint32 value) {
+    bytes32[] memory _keyTuple = new bytes32[](1);
+    _keyTuple[0] = id;
 
     bytes32 _blob = StoreSwitch.getStaticField(_tableId, _keyTuple, 0, _fieldLayout);
     return (uint32(bytes4(_blob)));
@@ -72,8 +74,9 @@ library Count {
   /**
    * @notice Get value.
    */
-  function _getValue() internal view returns (uint32 value) {
-    bytes32[] memory _keyTuple = new bytes32[](0);
+  function _getValue(bytes32 id) internal view returns (uint32 value) {
+    bytes32[] memory _keyTuple = new bytes32[](1);
+    _keyTuple[0] = id;
 
     bytes32 _blob = StoreCore.getStaticField(_tableId, _keyTuple, 0, _fieldLayout);
     return (uint32(bytes4(_blob)));
@@ -82,8 +85,9 @@ library Count {
   /**
    * @notice Get value.
    */
-  function get() internal view returns (uint32 value) {
-    bytes32[] memory _keyTuple = new bytes32[](0);
+  function get(bytes32 id) internal view returns (uint32 value) {
+    bytes32[] memory _keyTuple = new bytes32[](1);
+    _keyTuple[0] = id;
 
     bytes32 _blob = StoreSwitch.getStaticField(_tableId, _keyTuple, 0, _fieldLayout);
     return (uint32(bytes4(_blob)));
@@ -92,8 +96,9 @@ library Count {
   /**
    * @notice Get value.
    */
-  function _get() internal view returns (uint32 value) {
-    bytes32[] memory _keyTuple = new bytes32[](0);
+  function _get(bytes32 id) internal view returns (uint32 value) {
+    bytes32[] memory _keyTuple = new bytes32[](1);
+    _keyTuple[0] = id;
 
     bytes32 _blob = StoreCore.getStaticField(_tableId, _keyTuple, 0, _fieldLayout);
     return (uint32(bytes4(_blob)));
@@ -102,8 +107,9 @@ library Count {
   /**
    * @notice Set value.
    */
-  function setValue(uint32 value) internal {
-    bytes32[] memory _keyTuple = new bytes32[](0);
+  function setValue(bytes32 id, uint32 value) internal {
+    bytes32[] memory _keyTuple = new bytes32[](1);
+    _keyTuple[0] = id;
 
     StoreSwitch.setStaticField(_tableId, _keyTuple, 0, abi.encodePacked((value)), _fieldLayout);
   }
@@ -111,8 +117,9 @@ library Count {
   /**
    * @notice Set value.
    */
-  function _setValue(uint32 value) internal {
-    bytes32[] memory _keyTuple = new bytes32[](0);
+  function _setValue(bytes32 id, uint32 value) internal {
+    bytes32[] memory _keyTuple = new bytes32[](1);
+    _keyTuple[0] = id;
 
     StoreCore.setStaticField(_tableId, _keyTuple, 0, abi.encodePacked((value)), _fieldLayout);
   }
@@ -120,8 +127,9 @@ library Count {
   /**
    * @notice Set value.
    */
-  function set(uint32 value) internal {
-    bytes32[] memory _keyTuple = new bytes32[](0);
+  function set(bytes32 id, uint32 value) internal {
+    bytes32[] memory _keyTuple = new bytes32[](1);
+    _keyTuple[0] = id;
 
     StoreSwitch.setStaticField(_tableId, _keyTuple, 0, abi.encodePacked((value)), _fieldLayout);
   }
@@ -129,8 +137,9 @@ library Count {
   /**
    * @notice Set value.
    */
-  function _set(uint32 value) internal {
-    bytes32[] memory _keyTuple = new bytes32[](0);
+  function _set(bytes32 id, uint32 value) internal {
+    bytes32[] memory _keyTuple = new bytes32[](1);
+    _keyTuple[0] = id;
 
     StoreCore.setStaticField(_tableId, _keyTuple, 0, abi.encodePacked((value)), _fieldLayout);
   }
@@ -138,8 +147,9 @@ library Count {
   /**
    * @notice Delete all data for given keys.
    */
-  function deleteRecord() internal {
-    bytes32[] memory _keyTuple = new bytes32[](0);
+  function deleteRecord(bytes32 id) internal {
+    bytes32[] memory _keyTuple = new bytes32[](1);
+    _keyTuple[0] = id;
 
     StoreSwitch.deleteRecord(_tableId, _keyTuple);
   }
@@ -147,8 +157,9 @@ library Count {
   /**
    * @notice Delete all data for given keys.
    */
-  function _deleteRecord() internal {
-    bytes32[] memory _keyTuple = new bytes32[](0);
+  function _deleteRecord(bytes32 id) internal {
+    bytes32[] memory _keyTuple = new bytes32[](1);
+    _keyTuple[0] = id;
 
     StoreCore.deleteRecord(_tableId, _keyTuple, _fieldLayout);
   }
@@ -179,8 +190,9 @@ library Count {
   /**
    * @notice Encode keys as a bytes32 array using this table's field layout.
    */
-  function encodeKeyTuple() internal pure returns (bytes32[] memory) {
-    bytes32[] memory _keyTuple = new bytes32[](0);
+  function encodeKeyTuple(bytes32 id) internal pure returns (bytes32[] memory) {
+    bytes32[] memory _keyTuple = new bytes32[](1);
+    _keyTuple[0] = id;
 
     return _keyTuple;
   }

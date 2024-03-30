@@ -26,8 +26,8 @@ struct BoundsData {
 }
 
 library Bounds {
-  // Hex below is the result of `WorldResourceIdLib.encode({ namespace: "", name: "Bounds", typeId: RESOURCE_TABLE });`
-  ResourceId constant _tableId = ResourceId.wrap(0x74620000000000000000000000000000426f756e647300000000000000000000);
+  // Hex below is the result of `WorldResourceIdLib.encode({ namespace: "games", name: "Bounds", typeId: RESOURCE_TABLE });`
+  ResourceId constant _tableId = ResourceId.wrap(0x746267616d6573000000000000000000426f756e647300000000000000000000);
 
   FieldLayout constant _fieldLayout =
     FieldLayout.wrap(0x0018060004040404040400000000000000000000000000000000000000000000);
