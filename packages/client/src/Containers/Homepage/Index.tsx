@@ -37,13 +37,7 @@ function Homepage() {
 				<MenuButton
 					link={"/newgame"}
 					className={HomepageCSS["user-selection-input"]}
-					text={"HOST A GAME"}
-				/>
-
-				<MenuButton
-					link={"/join"}
-					className={HomepageCSS["user-selection-input"]}
-					text={"JOIN A GAME"}
+					text={"START GAME"}
 				/>
 			</div>
 			<Rules />
