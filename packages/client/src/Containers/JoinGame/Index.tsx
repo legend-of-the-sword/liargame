@@ -39,7 +39,7 @@ function JoinGame() {
 		<>
 			<div className={JoinGameCSS["join-game-title-wrapper"]}>
 				<img src={TitleImage} className={JoinGameCSS.titleImage} alt="LIAR: 신검의 전설 II -- Cipher Syndicate" />
-				<h5 className={JoinGameCSS["header"]}>A Lovecraftian Inspired Mafia Game</h5>
+				<h5 className={JoinGameCSS["header"]}>LIAR: 신검의 전설 II -- Cipher Syndicate</h5>
 			</div>
 			<div className={JoinGameCSS["subtitle-wrapper"]}>
 				<SubTitle title="JOIN A GAME" />

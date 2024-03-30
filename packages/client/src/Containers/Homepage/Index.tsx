@@ -30,7 +30,7 @@ function Homepage() {
 		<div>
 			<div className={HomepageCSS["homepage-title-wrapper"]}>
 				<img src={TitleImage} className={HomepageCSS.titleImage} alt="LIAR: 신검의 전설 II -- Cipher Syndicate" />
-				<h5 className={HomepageCSS["h5Header"]}>A Lovecraftian Inspired Mafia Game</h5>
+				<h5 className={HomepageCSS["h5Header"]}>LIAR: 신검의 전설 II -- Cipher Syndicate</h5>
 			</div>
 
 			<div className={HomepageCSS["hostOrJoinBtns-wrapper"]}>

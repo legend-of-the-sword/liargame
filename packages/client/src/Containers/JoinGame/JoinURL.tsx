@@ -25,7 +25,7 @@ function JoinURL(): JSX.Element {
 		<>
 			<div className={styles["join-game-title-wrapper"]}>
 				<img src={TitleImage} className={styles.titleImage} alt="LIAR: 신검의 전설 II -- Cipher Syndicate" />
-				<h5 className={styles["header"]}>A Lovecraftian Inspired Mafia Game</h5>
+				<h5 className={styles["header"]}>LIAR: 신검의 전설 II -- Cipher Syndicate</h5>
 			</div>
 			<p>...joining game</p>
 		</>

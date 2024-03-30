@@ -63,7 +63,7 @@ function CreatePlayer() {
 		<>
 			<div className={CreatePlayerCSS["join-game-title-wrapper"]}>
 				<img src={TitleImage} className={CreatePlayerCSS.titleImage} alt="LIAR: 신검의 전설 II -- Cipher Syndicate" />
-				<h5 className={CreatePlayerCSS["header"]}>A Lovecraftian Inspired Mafia Game</h5>
+				<h5 className={CreatePlayerCSS["header"]}>LIAR: 신검의 전설 II -- Cipher Syndicate</h5>
 			</div>
 			<div className={CreatePlayerCSS["subtitle-wrapper"]}>
 				<SubTitle title="YOUR CHARACTER" />
