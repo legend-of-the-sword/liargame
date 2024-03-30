@@ -8,6 +8,8 @@ export type Player = {
 	traits: string[]
 	avatar: string
 	isReady: boolean
+	isAgent: boolean
+	wallet: string
 	isDisconnected: boolean
 }
 
