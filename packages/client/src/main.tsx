@@ -1,9 +1,6 @@
 import React from 'react';
-import { KeyboardControls } from '@react-three/drei';
-import { Leva } from 'leva';
 import ReactDOM from 'react-dom/client';
 
-import { Scene } from '@/components/canvas/scene';
 
 import '@/styles/globals.css';
 
@@ -13,28 +10,26 @@ import { map } from '@/lib/config/KeyboardControls';
 import { MUDProvider } from '@/lib/config/MUDContext';
 import { setup } from '@/lib/mud/setup';
 
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import App from "./App";
+import "./index.css";
+
+const queryClient = new QueryClient();
+
 setup().then(async (result) => {
   ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
       <MUDProvider value={result}>
-        <KeyboardControls map={map}>
-          <div className="main">
-            <Leva
-              collapsed={false}
-              oneLineLabels={false}
-              flat={true}
-              theme={{
-                sizes: {
-                  titleBarHeight: '28px',
-                },
-                fontSizes: {
-                  root: '10px',
-                },
-              }}
-            />
-            <Scene />
-          </div>
-        </KeyboardControls>
+      <BrowserRouter>
+			<Routes>
+				<Route path="/*" element={
+					<QueryClientProvider client={queryClient}>
+            <App />
+					</QueryClientProvider>
+				} />
+			</Routes>
+		</BrowserRouter>
       </MUDProvider>
     </React.StrictMode>,
   );

@@ -1,0 +1,138 @@
+@import url('https://fonts.cdnfonts.com/css/american-typewriter');
+@import url('https://fonts.cdnfonts.com/css/bebas-neue');
+
+@keyframes moveInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  50% {
+    filter:blur(10px)
+  }
+  80% {
+    transform: translateX(30px);
+    
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0)
+  }
+}
+
+.homepage-title-wrapper {
+  display: grid;
+  place-items: center;
+  margin: 2rem auto;
+  width: 30vw;
+  animation-name: moveInFromLeft;
+  animation-duration: 3s;
+}
+
+.h5Header {
+  color: white;
+  font-family: 'American Typewriter', sans-serif;
+  font-weight: 800;
+  font-size: 1.6rem;
+  margin: 0;
+  margin-top: -3%;
+  margin-left: -27%;
+}
+
+.titleImage {
+  width: 32vw;
+}
+
+.hostOrJoinBtns-wrapper {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-selection-input{
+  margin-top: 1%;
+  height: 6vh;
+  width: 33vw;
+  background-size: cover;
+  transform: scale(0.8);
+  font-family: 'Bebas Neue';
+  font-size: 2em;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  border-radius: 0;
+  border: 1px solid transparent;
+}
+
+.user-selection-input:hover {
+  opacity: 0.65;
+  color: black;
+  transition: ease-in-out 0.5s;
+  transition-timing-function: ease-in-out .8s;
+  box-shadow: 2px 2px 7px 2px rgba(236, 236, 236, 0.5);
+  cursor: pointer;
+}
+
+.form input {
+  color: black;
+  margin: 0;
+  box-shadow: inset 1px 0px 5px 3px rgba(0, 0, 0, 0.4);
+}
+
+.homepage-footer{
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  margin-top: 0.5%;
+  font-family: 'American Typewriter', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.questionMark {
+  flex-direction: right;
+  width: 2vw;
+  margin-left: 1%;
+  color: white;
+  cursor: pointer;
+}
+
+.questionMark:hover {
+	transform: scale(1.2);
+	transition: ease-in 0.5s;
+}
+
+.modalContent {
+  align-items: center;
+  height: 70vh;
+  width: 40vw;
+  border-radius: 10px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: auto;
+}
+
+.modalContent::-webkit-scrollbar {
+  width: 10px;               /* width of the entire scrollbar */
+}
+.modalContent::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);        /* color of the tracking area */
+}
+.modalContent::-webkit-scrollbar-thumb {
+  background-color: rgba(104, 12, 12);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+.headerTwo {
+  color: rgba(104, 12, 12);
+} 
+
+.listHeader {
+  font-size: 20px;
+  font-weight: 400;
+}

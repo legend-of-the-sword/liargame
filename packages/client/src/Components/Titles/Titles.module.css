@@ -1,0 +1,18 @@
+.subTitleContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+}
+.subTitleContainer h6 {
+    font-size: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 600;
+}
+.border {
+    width: 160px;
+    border-bottom: 1.5px solid #ffffff;
+    margin: 0px 10px;
+}

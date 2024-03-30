@@ -5,3 +5,6 @@ procs:
   client:
     cwd: packages/client
     shell: pnpm run dev
+  backend:
+    cwd: pacakges/api
+    shell: pnpm run dev

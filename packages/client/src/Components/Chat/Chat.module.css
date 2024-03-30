@@ -1,0 +1,370 @@
+@import url('https://fonts.cdnfonts.com/css/american-typewriter');
+.showChatButton {
+  background-color: rgba(29, 29, 29, 0.868);
+  color: rgb(210, 207, 207);
+  font-weight: bold;
+  border: none;
+  width: 100%;
+  display: block;
+  height: 30px;
+}
+.showChatButton:hover {
+  cursor: pointer;
+}
+/* Name Badges */
+.yourNameBadge{
+  color: rgb(30, 30, 30);
+  border: 1px solid black;
+  font-weight: bold;
+  padding: 1px 5px;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+}
+.nameBadge {
+  color: black;
+  font-weight: bold;
+  padding: 1px 3px;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+}
+/* Chat Body Containers */
+.hideCultistChatContainer {
+  display: none;
+}
+.hideAllChatContainer {
+  display: none;
+}
+.hideGhostChatContainer {
+  display: none;
+}
+.chatBodyContainer {
+  font-family: 'American Typewriter', serif;
+  height: 225px;
+  border: 2px solid rgb(107, 107, 107);
+  background-color: rgb(148, 146, 146);;
+  overflow: auto;
+  margin-bottom: 5px;
+  word-wrap: break-word;
+}
+.chatCultistBodyContainer{
+  font-family: 'American Typewriter', serif;
+  height: 225px;
+  border: 2px solid rgb(95, 4, 4);
+  background-color: rgb(172, 47, 47);
+  overflow: auto;
+  margin-bottom: 5px;
+  word-wrap: break-word;
+}
+.chatGhostBodyContainer{
+  font-family: 'American Typewriter', serif;
+  height: 225px;
+  border: 2px solid darkblue;
+  background-color: rgb(121, 154, 238);
+  overflow: auto;
+  margin-bottom: 5px;
+  word-wrap: break-word;
+}
+.chatContainerBodyContainer {
+  width: 380px;
+  margin: auto;
+  margin-bottom: 5px;
+}
+/* Chat Wrapper */
+.chatContainerWrapper {
+  position: absolute;
+  width: 400px;
+  left: 60%;
+  background-color: rgba(29, 29, 29, 0.823);
+  z-index: 3;
+  border-radius: 10px;
+  border: 4px solid black;
+}
+.allChatContainer {
+  height: 280px;
+}
+/* Messages */
+.chatMessage  {
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 5px;
+  font-size: 16px;
+  line-height: 1.2rem;
+}
+.waringChatMessage{
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+.errorChatMessage {
+  color: rgb(2, 25, 89);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 5px;
+}
+/* Chat Text Bar and Button */
+.chatTextBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 75px;
+  margin: auto;
+}
+.chatTextInput {
+  font-family: 'American Typewriter', serif;
+  border: solid 1px black;
+  background-color: whitesmoke;
+  color: black;
+  text-align: left;
+  padding: 6px 10px;
+  border-radius: 5px;
+  line-height: 1.2rem;
+  font-size: 15px;
+  width: 260px;
+  max-height: 65px;
+  overflow: auto;
+  resize: none;
+}
+.chatTextInputWrapper {
+  background-color: blue;
+  width: 100%;
+}
+.chatTextButton {
+  background-color: rgb(205, 63, 63);
+  border: 2px solid transparent;
+  margin-left: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 8px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.chatTextButton:hover {
+  cursor: pointer;
+  border: 2px solid darkred;
+}
+/* Chat Button Headers */
+.notificationSpan {
+  display: inline-block;
+  width: 15px;
+  text-align: center;
+  border-radius: 50%;
+  margin-left: 6px;
+  font-size: 14px;
+  color: whitesmoke;
+  background-color: #333;
+  border: 1px solid #333;
+  padding: 3px;
+}
+.buttonHeaderContainer {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 5px;
+}
+.activeAllButtonHeader {
+  width: 100%;
+  border: none;
+  display: block;
+  background-color: rgba(29, 29, 29, 0.823);
+  color: white;
+  font-weight: bold;
+  padding: 3px 10px;
+  font-size: 18px;
+  text-decoration: underline;
+  
+}
+.allButtonHeader {
+  width: 100%;
+  border: none;
+  display: block;
+  background-color: rgba(29, 29, 29, 0.823);
+  color: rgb(80, 79, 79);
+  padding: 3px 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.allButtonHeader:hover {
+  cursor: pointer;
+}
+.activeGhostButtonHeader {
+  width: 100%;
+  border: none;
+  display: block;
+  background-color: rgba(29, 29, 29, 0.823);
+  color: darkblue;
+  font-weight: bold;
+  padding: 3px 10px;
+  font-size: 18px;
+  border-left: 2px solid black;
+  text-decoration: underline;
+}
+.ghostButtonHeader {
+  width: 100%;
+  border: none;
+  display: block;
+  background-color: rgba(29, 29, 29, 0.823);
+  color: rgb(80, 79, 79);
+  padding: 3px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border-left: 2px solid black;
+}
+.ghostButtonHeader:hover {
+  cursor: pointer;
+}
+.activeCultistButtonHeader {
+  width: 100%;
+  border: none;
+  display: block;
+  background-color: rgba(29, 29, 29, 0.823);
+  color: rgb(168, 26, 26);
+  font-weight: bold;
+  padding: 3px 10px;
+  font-size: 18px;
+  border-left: 2px solid black;
+  text-decoration: underline;
+}
+.cultistButtonHeader {
+  width: 100%;
+  border: none;
+  display: block;
+  background-color: rgba(29, 29, 29, 0.823);
+  color: rgb(80, 79, 79);
+  padding: 3px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border-left: 2px solid black;
+}
+.cultistButtonHeader:hover {
+  cursor: pointer;
+}
+
+/* Lobby Chat */
+.lobbyChatWrapper {
+  background-color: rgba(29, 29, 29, 0.823);
+  border: 4px solid black;
+  border-radius: 10px;
+  position: absolute;
+  width: 33%;
+  right: 33%;
+  z-index: 2;
+}
+.lobbyChatBodyContainer {
+  text-align: left;
+  height: 280px;
+  width: 85%;
+  margin: auto;
+  max-height: 280px;
+  margin-bottom: 10px;
+  overflow: auto;
+  background-color: rgb(148, 146, 146);;
+  font-family: 'American Typewriter', serif;
+  border: 3px solid rgb(72, 72, 72);
+  padding-left: 5px;
+}
+.lobbyTextboxContainer{
+  width: 90%;
+  margin: auto;
+}
+.showLobbyChatButton {
+  background-color: rgba(29, 29, 29, 0.868);
+  color: rgb(210, 207, 207);
+  font-weight: bold;
+  border: none;
+  width: 100%;
+  margin: auto;
+  display: block;
+  height: 35px;
+  /* border: 3px solid black; */
+  border-radius: 10px;
+}
+.showLobbyChatButton:hover {
+  cursor: pointer;
+}
+/* Animations */
+.showChatAnimation {
+  animation: showChat 0.5s ease-out forwards;
+}
+.hideChatAnimation {
+  animation: hideChat 0.5s ease-out forwards;
+}
+.hideChatContent {
+  display: none;
+}
+.showLobbyChatAnimation {
+  animation: showLobbyChat 0.5s ease-out forwards;
+}
+.hideLobbyChatAnimation {
+  animation: hideLobbyChat 0.5s ease-out forwards;
+}
+
+@keyframes showChat {
+  0% {
+    opacity: 0;
+    height: 0px;
+  }
+  99%{
+    opacity: 0;
+  }
+  100% {
+    height: 320px;
+  }
+}
+@keyframes hideChat {
+  0% {
+    opacity: 0;
+    height: 320px;
+  }
+  99%{
+    opacity: 0;
+  }
+  100% {
+    height: 0px;
+  }
+}
+@keyframes showLobbyChat {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 380px;
+  }
+}
+@keyframes hideLobbyChat {
+  0% {
+    opacity: 1;
+    height:380px;
+  }
+  99%{
+    opacity: 1;
+  }
+  100% {
+    height: 0px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+	.chatContainerWrapper {
+    left: 55%;
+  }
+}
+@media screen and (max-width: 1200px) {
+	.chatContainerWrapper {
+    left: 50%;
+  }
+}
+@media screen and (max-width: 1000px) {
+	.chatContainerWrapper {
+    left: 25%;
+  }
+}

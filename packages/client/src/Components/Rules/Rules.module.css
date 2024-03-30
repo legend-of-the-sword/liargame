@@ -1,0 +1,70 @@
+.homepageFooter{
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  margin: 0 auto;
+  margin-top: 0.5%;
+  font-family: 'American Typewriter', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.questionMark {
+  flex-direction: right;
+  width: 2vw;
+  margin-left: 1%;
+  color: white;
+  cursor: pointer;
+}
+
+.questionMark:hover {
+	transform: scale(1.2);
+	transition: ease-in-out 0.3s;
+}
+
+.modalContent {
+  align-items: center;
+  height: 70vh;
+  width: 57vw;
+  border-radius: 10px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: auto;
+}
+
+.modalContent::-webkit-scrollbar {
+  width: 10px;
+	padding-left: 1px;               /* width of the entire scrollbar */
+}
+.modalContent::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);        /* color of the tracking area */
+}
+.modalContent::-webkit-scrollbar-thumb {
+  background-color: rgb(208, 0, 9);    
+  border-radius: 20px;     
+}
+
+.headerTwo {
+  color: rgb(208, 0, 9);
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.paraContent {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.listHeader {
+  font-weight: 400;
+  font-size: 28px;
+  text-decoration: underline;
+  color: orange;
+}
+
+.smallHeader {
+  font-weight: 400;
+  font-size: 24px;
+  color: darkgrey;
+  text-decoration: underline;
+}
+

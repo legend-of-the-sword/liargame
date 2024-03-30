@@ -1,0 +1,15 @@
+.player-status-overlay {
+  position: absolute;
+  width: 85%;
+  height: 100%;
+  color: white;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.player-card-badge {
+  position: relative;
+  left: 10%;
+  top: 25%;
+  max-width: 200px;
+}
