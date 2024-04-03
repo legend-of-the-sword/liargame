@@ -24,30 +24,6 @@ type VoteResult = {
 	count: number
   }
 
-const handleResponse = async (response: Response) => {
-	const json = await response.json();
-
-	if (!response.ok) {
-		throw Error(json.error);
-	} else {
-		return json;
-	}
-};
-
-const  API_ENDPOINT = "azar6-yaaaa-aaaag-ak4vq-cai.raw.icp0.io";
-
-const getICPData = async (endpoint: string) => {
-	const url = `${API_ENDPOINT}${endpoint}`;
-	const response = await fetch(url, { ...BASE_HEADERS , method: "GET" });
-	return await handleResponse(response);
-};
-
-const postICPData = async (endpoint: string, payload: unknown) => {
-	const url = `${API_ENDPOINT}${endpoint}`;
-	const response = await fetch(url, { ...BASE_HEADERS , method: "POST", body: JSON.stringify(payload) });
-	return await handleResponse(response);
-};
-
 const logicControllers = {
 	async startGame(req: any, res: any) {
 		const { gameId } = req.body;
@@ -106,7 +82,6 @@ const logicControllers = {
 		if (!player) {
 			res.status(401).json({ error: "You are not allowed to send images" });
 		} else {
-			await postData("/guess", imgIndex);
 			await addGhostImage(player.gameId, imgIndex);
 			res.json({ message: "Image submitted" });
 		}

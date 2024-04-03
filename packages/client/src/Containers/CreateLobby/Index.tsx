@@ -67,19 +67,26 @@ function CreateLobby() {
 				<SubTitle title="HOST A NEW GAME" />
 			</div>
 			<div>
-				<form onSubmit={onSubmit}>
+			<form onSubmit={onSubmit}>
 					<input
 						className={CreateLobbyCSS["user-selection-input"]}
 						name="name" 
 						maxLength={40}
 						minLength={1}
 						placeholder="Enter game name" 
-						onChange={e =>{
-							setLobbyName(e.target.value) 
-							setLobbySize(parseInt("6"))
-							}
-						}
-						/>
+						onChange={e => setLobbyName(e.target.value)} />
+					<select
+						className={CreateLobbyCSS["drop-selection-input"]}  
+						onChange={e => setLobbySize(parseInt(e.target.value))}>
+						<option value="default">Select player count</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+					</select>
 					<MenuButton
 						className={CreateLobbyCSS["create-game-btn"]}  
 						text={"CONTINUE"}
